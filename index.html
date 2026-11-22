@@ -1,0 +1,1059 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="google-site-verification" content="HoWofmErOOKMSn8dHeXvBTb5cGoEBEB1rQ7Y3CrUYgY" />
+    <link rel="canonical" href="https://spinthewheelhub.github.io/" />
+    <meta property="og:url" content="https://spinthewheelhub.github.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="data:," />
+    <title>Spin the Wheel — Free Random Name Picker | SpinTheWheelHub</title>
+    <meta name="description" content="SpinTheWheelHub is a free spin the wheel random picker. Add your names or choices, spin the colorful wheel, and pick a fair winner for giveaways, classrooms, teams and everyday decisions." />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="SpinTheWheelHub" />
+    <meta property="og:title" content="Spin the Wheel — Free Random Name Picker | SpinTheWheelHub" />
+    <meta property="og:description" content="Add your entries, spin the wheel, and let chance pick a fair winner. Free random picker for giveaways, classrooms, team picks and decisions." />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Spin the Wheel — Free Random Name Picker | SpinTheWheelHub" />
+    <meta name="twitter:description" content="A free, fair random picker wheel for giveaways, classrooms, teams and everyday decisions." />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "SpinTheWheelHub",
+      "url": "https://spinthewheelhub.github.io/",
+      "description": "Free spin the wheel random picker for giveaways, classrooms, team picks and decision making.",
+      "inLanguage": "en"
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap" rel="stylesheet" />
+    <style>
+      button, [role="button"], select, summary, input:not([type="checkbox"], [type="radio"]), a.navlink, a.btn { min-height: 2.25rem; }
+    </style>
+    <style>
+      :root {
+        --bg: #f7f4fd;
+        --bg-soft: #efe9fb;
+        --surface: #ffffff;
+        --ink: #241a3e;
+        --ink-soft: #57496e;
+        --line: #ddd2f2;
+        --purple: #6d28d9;
+        --purple-dark: #4c1d95;
+        --purple-bright: #8b5cf6;
+        --purple-tint: #ede9fe;
+        --gold: #f59e0b;
+        --danger: #b91c1c;
+        --shadow: 0 18px 40px rgba(76, 29, 149, 0.16);
+        --radius: 14px;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #150e2a;
+          --bg-soft: #1d1438;
+          --surface: #211743;
+          --ink: #f0ebfd;
+          --ink-soft: #c4b8e8;
+          --line: #3d2c6e;
+          --purple: #a78bfa;
+          --purple-dark: #c4b5fd;
+          --purple-bright: #8b5cf6;
+          --purple-tint: #2c1e55;
+          --gold: #fbbf24;
+          --danger: #fca5a5;
+          --shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+        }
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: "Nunito Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+        font-size: 1.05rem;
+        line-height: 1.65;
+      }
+      h1, h2, h3, h4 { font-family: "Poppins", system-ui, sans-serif; line-height: 1.25; color: var(--ink); }
+      h1 { font-size: clamp(1.9rem, 4.5vw, 2.9rem); font-weight: 800; margin: 0 0 0.6rem; letter-spacing: -0.01em; }
+      h2 { font-size: clamp(1.45rem, 3vw, 2rem); font-weight: 700; margin: 2.4rem 0 0.7rem; }
+      h3 { font-size: 1.2rem; font-weight: 600; margin: 1.6rem 0 0.45rem; }
+      p { margin: 0 0 1rem; }
+      a { color: var(--purple); text-decoration: underline; text-underline-offset: 3px; }
+      a:hover { color: var(--purple-dark); }
+      .wrap { max-width: 1080px; margin: 0 auto; padding: 0 1.1rem; }
+
+      /* Header / nav */
+      header.site {
+        background: var(--purple-dark);
+        color: #fff;
+        position: sticky; top: 0; z-index: 40;
+        box-shadow: 0 2px 14px rgba(30, 10, 70, 0.35);
+      }
+      @media (prefers-color-scheme: dark) {
+        header.site { background: #241452; }
+      }
+      .navrow { display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap; padding: 0.45rem 0; }
+      .brand {
+        font-family: "Poppins", sans-serif; font-weight: 800; font-size: 1.15rem;
+        color: #fff; text-decoration: none; margin-right: auto; display: inline-flex; align-items: center; gap: 0.5rem;
+        padding: 0.35rem 0.2rem;
+      }
+      .brand:hover { color: #e9e2ff; }
+      .brand .dot {
+        width: 26px; height: 26px; border-radius: 50%; flex: none;
+        background: conic-gradient(#f59e0b 0 25%, #db2777 0 50%, #38bdf8 0 75%, #34d399 0 100%);
+        border: 3px solid #fff;
+      }
+      a.navlink {
+        color: #e9e2ff; text-decoration: none; font-weight: 600; font-size: 0.98rem;
+        padding: 0.45rem 0.7rem; border-radius: 8px; display: inline-flex; align-items: center;
+      }
+      a.navlink:hover { background: rgba(255,255,255,0.14); color: #fff; }
+      a.navlink.active { background: rgba(255,255,255,0.2); color: #fff; }
+
+      main { padding-bottom: 3rem; }
+      .page { display: none; }
+      .page.active { display: block; }
+
+      /* Tool */
+      .tool-hero { padding: 2rem 0 0.4rem; }
+      .tool-hero p.lede { font-size: 1.13rem; color: var(--ink-soft); max-width: 46rem; }
+      .tool-grid {
+        display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+        gap: 2rem; align-items: start; margin-top: 1.2rem;
+      }
+      @media (max-width: 820px) { .tool-grid { grid-template-columns: 1fr; } }
+      .wheel-stage { position: relative; max-width: 540px; margin: 0 auto; width: 100%; }
+      .wheel-frame {
+        position: relative; border-radius: 50%;
+        background: var(--surface);
+        box-shadow: var(--shadow);
+        padding: 10px;
+      }
+      canvas#wheel { display: block; width: 100%; height: auto; border-radius: 50%; }
+      .pointer {
+        position: absolute; top: -8px; left: 50%; transform: translateX(-50%);
+        width: 0; height: 0; z-index: 5;
+        border-left: 17px solid transparent; border-right: 17px solid transparent;
+        border-top: 30px solid var(--gold);
+        filter: drop-shadow(0 3px 3px rgba(0,0,0,0.3));
+      }
+      .spin-btn {
+        display: block; margin: 1.1rem auto 0;
+        font-family: "Poppins", sans-serif; font-weight: 700; font-size: 1.2rem;
+        background: var(--purple); color: #fff; border: none; cursor: pointer;
+        padding: 0.85rem 3rem; border-radius: 999px; box-shadow: var(--shadow);
+        letter-spacing: 0.02em;
+      }
+      .spin-btn:hover:not(:disabled) { background: var(--purple-bright); }
+      .spin-btn:disabled { opacity: 0.55; cursor: wait; }
+      .panel label { font-family: "Poppins", sans-serif; font-weight: 600; display: block; margin-bottom: 0.4rem; }
+      .panel textarea {
+        width: 100%; min-height: 240px; resize: vertical;
+        font: inherit; font-size: 1rem; line-height: 1.5;
+        color: var(--ink); background: var(--surface);
+        border: 2px solid var(--line); border-radius: var(--radius);
+        padding: 0.8rem 0.9rem;
+      }
+      .panel textarea:focus { outline: 3px solid var(--purple-tint); border-color: var(--purple); }
+      .panel .hint { color: var(--ink-soft); font-size: 0.92rem; margin-top: 0.35rem; }
+      .btn-row { display: flex; flex-wrap: wrap; gap: 0.55rem; margin-top: 0.9rem; }
+      .btn {
+        font: inherit; font-weight: 700; cursor: pointer;
+        border-radius: 10px; padding: 0.55rem 1.05rem;
+        border: 2px solid var(--purple); background: var(--surface); color: var(--purple);
+        display: inline-flex; align-items: center; text-decoration: none;
+      }
+      .btn:hover { background: var(--purple-tint); }
+      .btn.primary { background: var(--purple); color: #fff; }
+      .btn.primary:hover { background: var(--purple-bright); border-color: var(--purple-bright); }
+      .btn.ghost { border-color: var(--line); color: var(--ink-soft); }
+      .btn.ghost:hover { background: var(--bg-soft); }
+      .count-line { margin-top: 0.8rem; font-weight: 700; color: var(--ink-soft); }
+      .count-line strong { color: var(--purple); }
+
+      /* Winner banner */
+      .winner {
+        display: none; margin-top: 1.4rem; text-align: center;
+        background: var(--purple-tint); border: 2px solid var(--purple);
+        border-radius: var(--radius); padding: 1.3rem 1.1rem;
+      }
+      .winner.show { display: block; }
+      .winner .w-label { font-family: "Poppins", sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.8rem; color: var(--purple); margin: 0; }
+      .winner .w-name { font-family: "Poppins", sans-serif; font-weight: 800; font-size: clamp(1.7rem, 5vw, 2.6rem); margin: 0.2rem 0 0.8rem; overflow-wrap: anywhere; }
+      .winner .btn-row { justify-content: center; margin-top: 0; }
+      canvas#confetti { position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 90; display: none; }
+
+      /* Prose sections */
+      .prose { max-width: 47rem; }
+      .prose.wide { max-width: 100%; }
+      section.block { padding: 0.4rem 0; }
+      .alt-band { background: var(--bg-soft); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); margin-top: 2.6rem; padding: 0.6rem 0 1.6rem; }
+      ul.clean, ol.clean { padding-left: 1.35rem; margin: 0 0 1rem; }
+      ul.clean li, ol.clean li { margin-bottom: 0.45rem; }
+      .guide-list { list-style: none; padding: 0; margin: 0.4rem 0 1rem; }
+      .guide-list li { padding: 0.85rem 0; border-bottom: 1px solid var(--line); }
+      .guide-list li:last-child { border-bottom: none; }
+      .guide-list a { font-family: "Poppins", sans-serif; font-weight: 600; font-size: 1.08rem; }
+      .guide-list p { margin: 0.25rem 0 0; color: var(--ink-soft); }
+      .faq-item h3 { margin-top: 1.4rem; }
+      .crumb { font-size: 0.92rem; color: var(--ink-soft); margin: 1.4rem 0 0.4rem; }
+      .crumb a { color: var(--ink-soft); }
+      .article-head { padding-top: 1.6rem; }
+      .article-head h1 { font-size: clamp(1.8rem, 4vw, 2.5rem); }
+      .meta-line { color: var(--ink-soft); font-size: 0.95rem; margin-bottom: 0.6rem; }
+
+      footer.site {
+        background: var(--purple-dark); color: #e9e2ff; margin-top: 3rem; padding: 2.2rem 0 1.6rem;
+      }
+      @media (prefers-color-scheme: dark) { footer.site { background: #241452; } }
+      footer.site a { color: #d9ccff; }
+      footer.site a:hover { color: #fff; }
+      .foot-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.4rem; }
+      footer.site h4 { color: #fff; margin: 0 0 0.6rem; font-size: 1rem; }
+      footer.site ul { list-style: none; padding: 0; margin: 0; }
+      footer.site li { margin-bottom: 0.35rem; }
+      footer.site li a { text-decoration: none; display: inline-block; padding: 0.15rem 0; }
+      .foot-note { border-top: 1px solid rgba(255,255,255,0.22); margin-top: 1.6rem; padding-top: 1rem; font-size: 0.92rem; color: #cbbdf5; }
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site">
+      <div class="wrap navrow">
+        <a class="brand" href="#/"><span class="dot" aria-hidden="true"></span>SpinTheWheelHub</a>
+        <nav aria-label="Main">
+          <a class="navlink" data-nav="home" href="#/">Wheel</a>
+          <a class="navlink" data-nav="guides" href="#/guides">Guides</a>
+          <a class="navlink" data-nav="about" href="#/about">About</a>
+          <a class="navlink" data-nav="faq" href="#/faq">FAQ</a>
+          <a class="navlink" data-nav="contact" href="#/contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- ===================== HOME ===================== -->
+      <div class="page" id="page-home">
+        <div class="wrap">
+          <div class="tool-hero">
+            <h1>Spin the Wheel — Free Random Picker</h1>
+            <p class="lede">Type your names, prizes or choices into the list, give the wheel a spin, and let chance pick a winner. No sign-up, no downloads — the wheel runs entirely in your browser, and your entries never leave your device.</p>
+          </div>
+
+          <div class="tool-grid">
+            <div>
+              <div class="wheel-stage">
+                <div class="pointer" aria-hidden="true"></div>
+                <div class="wheel-frame">
+                  <canvas id="wheel" width="640" height="640" role="img" aria-label="Spinning prize wheel with your entries"></canvas>
+                </div>
+              </div>
+              <button class="spin-btn" id="spinBtn" type="button">SPIN</button>
+              <div class="winner" id="winnerBox" role="status" aria-live="polite">
+                <p class="w-label">The wheel has spoken</p>
+                <p class="w-name" id="winnerName"></p>
+                <div class="btn-row">
+                  <button class="btn primary" id="removeWinnerBtn" type="button">Remove winner &amp; spin again</button>
+                  <button class="btn" id="spinAgainBtn" type="button">Spin again</button>
+                  <button class="btn ghost" id="closeWinnerBtn" type="button">Keep winner</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel">
+              <label for="entries">Your entries — one per line</label>
+              <textarea id="entries" spellcheck="false">Alice
+Bob
+Carol
+David
+Emma
+Frank
+Grace
+Henry</textarea>
+              <p class="hint">Edit the list freely: add a line to add an entry, delete a line to remove one. Blank lines are ignored, and the wheel redraws itself as you type.</p>
+              <div class="btn-row">
+                <button class="btn" id="shuffleBtn" type="button">Shuffle entries</button>
+                <button class="btn ghost" id="sortBtn" type="button">Sort A–Z</button>
+                <button class="btn ghost" id="clearBtn" type="button">Clear list</button>
+                <button class="btn ghost" id="sampleBtn" type="button">Restore sample names</button>
+              </div>
+              <p class="count-line"><strong id="entryCount">8</strong> entries on the wheel</p>
+              <p class="hint">Tip: duplicates are allowed. If a name appears twice, it takes up two slices and has double the chance — a handy way to weight a raffle without any settings.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="wrap">
+          <section class="block prose wide">
+            <h2>How the wheel works</h2>
+            <p>Every line in the entry box becomes one slice of the wheel, and every slice is exactly the same size. When you press <strong>SPIN</strong>, the wheel is given a strong random push — several full turns plus a random finishing angle — and then slows down gradually, the way a real fairground wheel loses speed, until the pointer settles on a single slice. That slice is your result. Because the final resting angle is chosen by a random number generator before the animation even starts, the pretty spinning is just the reveal: the outcome is decided by chance, not by the animation, the order of your list, or how long you watch it turn.</p>
+            <p>Using it takes three steps. First, type or paste your entries, one per line — names for a raffle, options for a decision, students for a classroom question. Second, if you like, shuffle the list so the slices land in a mixed order; shuffling changes nothing about the odds, but it looks fairer to an audience, which matters more than people admit. Third, spin, announce the winner, and either spin again with the same list or remove the winner and spin for the next prize. Our full walkthrough on <a href="#/guide/fair-giveaway">how to run a fair giveaway with a picker wheel</a> covers the whole flow, from collecting entries to announcing results people trust.</p>
+            <p>The wheel handles anywhere from two entries to a few hundred. With very long lists the labels get small, so for a big raffle we suggest spinning in rounds — or pasting the list in batches — rather than squinting at a wheel with three hundred hair-thin slices. Two entries is the minimum: with a single entry there is nothing for chance to decide.</p>
+
+            <h2>Is it actually fair? How the randomness works</h2>
+            <p>Fairness on a picker wheel comes down to two things: equal slices and an unpredictable stopping point. SpinTheWheelHub gives every entry an identical slice of the circle, so each entry's chance of winning is exactly one divided by the number of entries — with ten names, everyone has a 10% chance, no more and no less. The stopping point comes from your browser's built-in random number generator, the same technology used for shuffling music playlists and dealing digital card games. It does not remember previous spins, it has no favourites, and it cannot be nudged by where a name sits in your list.</p>
+            <p>One honest caveat, because fairness deserves honesty: a browser wheel is perfect for giveaways, classrooms, games and everyday decisions, but it is not a certified gambling device and should not be used where money, legal prizes or regulated draws are involved. For everything else — the vast majority of spins — it is as fair as drawing names from a hat, and considerably harder to argue with. If you want the longer comparison, read our guide on <a href="#/guide/random-picker-vs-drawing-names">random picker vs drawing names: which is fairer?</a>, which looks at where hats, slips of paper and envelopes quietly go wrong.</p>
+            <p>There is also a human side to fairness. A wheel is transparent in a way a hat is not: everyone can see every name on the wheel before the spin, watch it slow down, and see exactly where the pointer lands. Nobody has to trust that the person drawing the slip didn't peek, fold one corner, or practise a reach. That visible fairness is why wheels have become the default for livestream giveaways — a point we return to in the guide on <a href="#/guide/instagram-youtube-live">how to pick a winner on Instagram or YouTube Live</a>.</p>
+          </section>
+        </div>
+
+        <div class="alt-band">
+          <div class="wrap">
+            <section class="block prose wide">
+              <h2>What people use the wheel for</h2>
+              <h3>Giveaways and prize draws</h3>
+              <p>Social media giveaways are the wheel's natural home. Paste in the entrants, share your screen, and spin in front of your audience so the whole draw happens in the open. The winner banner and confetti make the moment feel like an event rather than an announcement, and removing each winner before the next spin keeps multi-prize draws clean. Our step-by-step guide to <a href="#/guide/fair-giveaway">running a fair giveaway with a picker wheel</a> covers entry rules, duplicate entries, redraws and what to do when the winner doesn't respond.</p>
+              <h3>Classrooms and teaching</h3>
+              <p>Teachers use the wheel to choose who answers next, form random groups, assign presentation order, and pick reward activities — all without the groans that follow when the same confident hands go up every time. Because the wheel decides, students accept the outcome and the teacher stays the good guy. There are dozens of variations in our guide to <a href="#/guide/classroom-wheel-ideas">spin the wheel in the classroom</a>, from cold-calling fairly to vocabulary games and behaviour rewards.</p>
+              <h3>Team picks and workplace draws</h3>
+              <p>Who makes the coffee run, who takes the first shift, whose team gets the new project, who presents at Friday's meeting — small workplace decisions breed outsized resentment when a manager simply chooses. A quick spin settles them in seconds and, crucially, settles them neutrally. The wheel is also a painless way to draft teams for office games or split a class into groups: spin, assign, remove, repeat.</p>
+              <h3>Everyday decisions</h3>
+              <p>What should we eat? Which film tonight? Where should the trip go? When a group is stuck between good options, the honest answer is that it doesn't matter — what matters is deciding. A <a href="#/guide/decision-wheels">decision wheel</a> breaks the deadlock in five seconds, and the small jolt of relief or disappointment you feel at the result usually tells you what you wanted all along. Our guide on <a href="#/guide/decision-wheels">letting chance decide without regrets</a> explains how to use that reaction instead of fighting it.</p>
+            </section>
+          </div>
+        </div>
+
+        <div class="wrap">
+          <section class="block prose wide">
+            <h2>Guides from SpinTheWheelHub</h2>
+            <p>Short on theory, long on practice — these guides go deeper on the situations above, with the exact steps, scripts and checklists we would want if we were running the draw ourselves.</p>
+            <ul class="guide-list">
+              <li>
+                <a href="#/guide/fair-giveaway">How to Run a Fair Giveaway with a Picker Wheel</a>
+                <p>Entry rules, duplicates, screen-sharing, redraws and unresponsive winners — the complete playbook for a draw nobody can argue with.</p>
+              </li>
+              <li>
+                <a href="#/guide/classroom-wheel-ideas">Spin the Wheel in the Classroom: Teacher Ideas</a>
+                <p>Fair cold-calling, random groups, reward wheels and subject games that keep every student in play.</p>
+              </li>
+              <li>
+                <a href="#/guide/random-picker-vs-drawing-names">Random Picker vs Drawing Names: Which Is Fairer?</a>
+                <p>An honest look at hats, slips and software — where each method quietly bends the odds, and which one your audience will trust.</p>
+              </li>
+              <li>
+                <a href="#/guide/instagram-youtube-live">How to Pick a Winner on Instagram or YouTube Live</a>
+                <p>Collect entries, verify them, share your screen and spin live — plus what to say when the winner isn't watching.</p>
+              </li>
+              <li>
+                <a href="#/guide/decision-wheels">Decision Wheels: Let Chance Decide (Without Regrets)</a>
+                <p>How to build a good decision wheel, when to trust the result, and when your reaction to it is the real answer.</p>
+              </li>
+            </ul>
+            <p>Still curious about the details — how many entries the wheel can hold, whether results are stored, what happens on a tie? The answers live on our <a href="#/faq">frequently asked questions</a> page. And if you would like to know who runs this site and why, that is on the <a href="#/about">About page</a>.</p>
+          </section>
+        </div>
+      </div>
+
+      <!-- ===================== GUIDES INDEX ===================== -->
+      <div class="page" id="page-guides">
+        <div class="wrap prose wide">
+          <div class="article-head">
+            <h1>Guides</h1>
+            <p class="meta-line">Practical, original guides from SpinTheWheelHub — no fluff, just the steps that make a spin fair, fun and trusted.</p>
+          </div>
+          <ul class="guide-list">
+            <li>
+              <a href="#/guide/fair-giveaway">How to Run a Fair Giveaway with a Picker Wheel</a>
+              <p>Entry rules, duplicates, screen-sharing, redraws and unresponsive winners — the complete playbook for a draw nobody can argue with.</p>
+            </li>
+            <li>
+              <a href="#/guide/classroom-wheel-ideas">Spin the Wheel in the Classroom: Teacher Ideas</a>
+              <p>Fair cold-calling, random groups, reward wheels and subject games that keep every student in play.</p>
+            </li>
+            <li>
+              <a href="#/guide/random-picker-vs-drawing-names">Random Picker vs Drawing Names: Which Is Fairer?</a>
+              <p>An honest look at hats, slips and software — where each method quietly bends the odds, and which one your audience will trust.</p>
+            </li>
+            <li>
+              <a href="#/guide/instagram-youtube-live">How to Pick a Winner on Instagram or YouTube Live</a>
+              <p>Collect entries, verify them, share your screen and spin live — plus what to say when the winner isn't watching.</p>
+            </li>
+            <li>
+              <a href="#/guide/decision-wheels">Decision Wheels: Let Chance Decide (Without Regrets)</a>
+              <p>How to build a good decision wheel, when to trust the result, and when your reaction to it is the real answer.</p>
+            </li>
+          </ul>
+          <p>Ready to spin? Head back to the <a href="#/">wheel on the homepage</a> and put the ideas into practice.</p>
+        </div>
+      </div>
+
+      <!-- ===================== GUIDE 1 ===================== -->
+      <div class="page" id="page-guide-fair-giveaway">
+        <div class="wrap prose">
+          <p class="crumb"><a href="#/">Home</a> · <a href="#/guides">Guides</a> · Fair Giveaway</p>
+          <div class="article-head">
+            <h1>How to Run a Fair Giveaway with a Picker Wheel</h1>
+            <p class="meta-line">A complete, practical playbook — from writing the rules to announcing a winner everyone believes in.</p>
+          </div>
+          <p>A giveaway lives or dies on trust. The prize can be modest, the audience small, the whole thing over in an afternoon — but if even one entrant walks away suspecting the draw was rigged, the giveaway has done the opposite of its job. A picker wheel is the easiest way to make a draw visibly fair, because the audience watches every name go on the wheel and watches the pointer land. This guide walks through the whole process, step by step, the way experienced hosts actually run it.</p>
+
+          <h2>Step 1: Write the rules before you collect a single entry</h2>
+          <p>Most giveaway disputes are not about the spin at all. They are about questions nobody answered in advance. Who can enter? Does commenting twice count twice? When does entry close? What happens if the winner never replies? Decide all of it up front and publish it with the giveaway announcement. Keep the rules short enough that people actually read them: eligibility, how to enter, the entry deadline, the draw date, how the winner will be contacted, and how long they have to respond before you redraw. If your prize has real monetary value or your region regulates prize promotions, check the local rules too — this guide covers fairness and good practice, not legal advice.</p>
+          <p>One decision matters more than the rest: whether one person can hold more than one entry. Both approaches are fair, but they are fair in different ways. One entry per person gives everyone identical odds. Multiple entries — say, one per comment or per tag — rewards engagement but lets an enthusiastic entrant outweigh a quiet one. Either is defensible; switching between them after entries open is not. State your choice in the rules and stick to it.</p>
+
+          <h2>Step 2: Collect and clean the entries</h2>
+          <p>When entry closes, gather the names into a plain list — a spreadsheet column or a text file is perfect. Then clean it. Remove obvious bot accounts and entries that broke your published rules. If your rules say one entry per person, remove duplicates now; if they allow multiples, leave them in. Read the list once for typos, because a misspelled winner name creates a pointless argument later. This cleaned list is exactly what you will paste into the <a href="#/">picker wheel on our homepage</a>, one name per line.</p>
+          <p>If the draw will be public, consider sharing the final entry list before the spin — a screenshot or a post listing everyone who made it in. It takes two minutes and it closes off the most common complaint in all of giveaway-land: "my name was never even entered." People who can find their own name on the list go into the draw calm, and calm audiences believe results.</p>
+
+          <h2>Step 3: Set up the wheel in front of your audience</h2>
+          <p>Paste the list into the entry box and check the count shown under it against your cleaned list — the numbers should match exactly. Shuffle the entries before you spin. Shuffling does not change anyone's odds, since every slice is the same size, but it mixes the slices so no one can claim the list was arranged to favour a position. Then share your screen, record the draw, or spin live — whatever your audience can watch. Show the full wheel, not a cropped corner of it. The entire point of using a wheel instead of quietly picking a name yourself is that the audience sees the same thing you see.</p>
+          <p>Before the real spin, do one practice spin with the sound on and the screen shared, just to confirm everything is visible and working. Then clear any practice result from people's minds by saying so out loud: "That was a test — the real draw starts now." It sounds like a small thing, but clearly separating test spins from the official spin prevents the single most awkward giveaway moment: a test winner thinking they have won.</p>
+
+          <h2>Step 4: Spin, announce, and screenshot</h2>
+          <p>Press spin and let the wheel do its work. When it stops, announce the winner by the exact name shown, and take a screenshot of the result before you touch anything. That screenshot is your receipt — post it with the announcement so latecomers can see the outcome for themselves. Then contact the winner the way your rules promised: a direct message, an email, a comment tag. Public announcement plus private contact is the belt-and-braces approach; doing only one of the two is where winners get missed.</p>
+          <p>Drawing several prizes? Announce the order in advance — biggest prize first or last, your choice — and after each winner, use the remove-winner option and spin again. Removing winners matters: it guarantees nobody takes two prizes unless your rules explicitly allow it, and the shrinking wheel makes each subsequent draw more dramatic, not less.</p>
+
+          <h2>Step 5: Handle the awkward cases before they handle you</h2>
+          <p><strong>The winner doesn't respond.</strong> Your rules already set a deadline — 48 hours is common. When it passes, say so publicly, then redraw from the same list with the same wheel. Never quietly hand the prize to a friend of the winner or to the runner-up; a redraw is the only outcome nobody can dispute.</p>
+          <p><strong>The winner turns out to be ineligible.</strong> Perhaps they are under the age limit, or in a country you excluded. Thank them, explain briefly, and redraw. Vague silence breeds conspiracy theories; a short honest explanation ends the story.</p>
+          <p><strong>Someone accuses you of rigging it.</strong> Point to the evidence: the published rules, the shared entry list, the recording or screenshot. This is why you built that trail. A host who can show every step rarely has to argue about any of them.</p>
+          <p><strong>A tie or a technical glitch.</strong> Wheels cannot tie — the pointer lands on one slice. If your screen froze mid-spin, the honest fix is a fresh spin in front of the same audience, announced as such. Everyone prefers a clean re-spin to a guessed result.</p>
+
+          <h2>A short checklist to keep beside you</h2>
+          <ol class="clean">
+            <li>Rules published before entries open, including the redraw policy.</li>
+            <li>Entries closed, cleaned, deduplicated according to the rules.</li>
+            <li>Entry list shared with the audience.</li>
+            <li>List pasted into the wheel; entry count matches.</li>
+            <li>Entries shuffled; one clearly announced test spin.</li>
+            <li>Official spin done on a shared or recorded screen.</li>
+            <li>Winner screenshotted, announced publicly, contacted privately.</li>
+            <li>Winners removed before any further prize spins.</li>
+            <li>Deadline watched; redraw held publicly if it passes.</li>
+          </ol>
+          <p>Follow that list and your giveaway will be boring in exactly the right way — all the excitement in the spin, none in the aftermath. If your draw happens on a livestream, our companion guide on <a href="#/guide/instagram-youtube-live">picking a winner on Instagram or YouTube Live</a> covers the streaming side in detail. And if you are wondering whether a wheel really beats the classic hat draw, we compared them honestly in <a href="#/guide/random-picker-vs-drawing-names">random picker vs drawing names</a>.</p>
+        </div>
+      </div>
+
+      <!-- ===================== GUIDE 2 ===================== -->
+      <div class="page" id="page-guide-classroom">
+        <div class="wrap prose">
+          <p class="crumb"><a href="#/">Home</a> · <a href="#/guides">Guides</a> · Classroom Ideas</p>
+          <div class="article-head">
+            <h1>Spin the Wheel in the Classroom: Teacher Ideas</h1>
+            <p class="meta-line">Fair cold-calling, painless group-making and reward wheels that keep the whole class in play.</p>
+          </div>
+          <p>Every teacher knows the pattern. You ask a question, and the same four hands go up — the confident, the keen, the ones who did the reading — while the rest of the class studies the grain of their desks. It is not laziness. Most students are running a quiet calculation: volunteering and being wrong feels risky, so the safest move is silence. A picker wheel changes that calculation completely, because being chosen stops being a performance and becomes luck. Nobody judges a student the wheel picked, and — just as usefully — nobody blames the teacher either. The wheel is the fairest colleague you will ever have: it has no favourites, no memory, and no mercy, and students accept its decisions with a shrug they would never give a teacher's choice.</p>
+          <p>Setup takes two minutes. Type your class list into the <a href="#/">wheel on our homepage</a>, one name per line, and keep the tab open. Because the list lives in your browser, you can return to it all day. Here is how teachers put it to work.</p>
+
+          <h2>Cold-calling without the dread</h2>
+          <p>The classic use: spin to choose who answers the next question. Done well, it keeps the whole class following along, because anyone could be next. Two refinements make it kinder and more effective. First, spin before you ask the question, not after — the chosen student then listens to the question knowing it is theirs, and everyone else relaxes into listening rather than rehearsing. Second, keep a "pass and return" norm: a student may pass once, but their name stays in and the wheel will come back to them later in the lesson. That single rule removes the terror (nobody is trapped) while keeping the accountability (nobody escapes forever). If you want no repeats within a lesson, remove each name after it is picked; if you want everyone to stay alert all lesson, leave names in.</p>
+
+          <h2>Random groups that end the friendship draft</h2>
+          <p>Group work collapses when students pick their own groups: friends cluster, the same students are left standing, and the lesson starts with a social negotiation instead of learning. The wheel ends it. Spin for the first member of group one, remove the name, spin again, and build each group in front of the class. Because the process is public and mechanical, complaints evaporate — students will argue with a teacher's grouping for ten minutes and accept the wheel's in ten seconds. For paired work, spin twice per pair. For a jigsaw activity, spin to assign topics to groups after the groups are formed, so nobody feels handed the "boring" topic by a human.</p>
+
+          <h2>The reward wheel</h2>
+          <p>Replace the name list with privileges and you have a reward wheel: choose the class playlist song, five minutes of free reading, pick tomorrow's warm-up game, sit in the good chair, be first in line, choose a classroom job, pick the story, earn a homework pass. Spin it for the class at the end of a good week, or let an individual student who earned it take the spin. Reward wheels work because the prizes cost nothing and the anticipation is the real reward — a wheel full of small delights generates more excitement than one big prize, and it can be spun far more often.</p>
+
+          <h2>Subject games and lesson mechanics</h2>
+          <p>The wheel is a flexible game engine. Put numbers on it and it becomes a dice substitute for maths practice — spin twice and multiply, add, or find the difference. Put vocabulary words on it and spin to choose which word the class must use in a sentence. Put question types on it — explain, compare, predict, give an example — and spin to decide how the class will engage with a text. In PE and music, spin for the next activity or warm-up. For revision, load the wheel with topic names and let it choose the order, which stops you unconsciously saving the hard topic for a day that never comes.</p>
+          <p>One more quiet superpower: the wheel as tiebreaker and referee. Which team goes first, which class project gets the wall space, whose question gets answered when time runs out — small decisions that would otherwise eat minutes and goodwill. Spin, accept, move on. The lesson keeps its pace, and the class learns something genuinely useful: that fair processes end arguments better than loud voices do.</p>
+
+          <h2>Making it work on a real classroom screen</h2>
+          <p>Project the wheel large and spin with the class watching — the shared suspense is half the value. Keep your class list saved as a text file so you can paste it in each morning in seconds, and keep a second list ready with first names only if your school prefers not to display full names on screen. For younger classes, read the result aloud and celebrate it; for older students, deadpan works better — the wheel needs no hype from you. And if a spin lands on a student who is absent, just remove the name and spin again without ceremony; the class will treat it as the ritual it is.</p>
+          <p>Used daily, the wheel quietly rewires classroom expectations: everyone prepares, because anyone can be chosen; everyone relaxes, because being chosen means nothing about them. That combination — alert and unembarrassed — is exactly the state good learning happens in. For the fairness thinking behind it, our explainer on <a href="#/guide/random-picker-vs-drawing-names">why a random picker beats drawing names</a> is worth a read, and the homepage <a href="#/">wheel</a> is ready whenever your class is.</p>
+        </div>
+      </div>
+
+      <!-- ===================== GUIDE 3 ===================== -->
+      <div class="page" id="page-guide-picker-vs-drawing">
+        <div class="wrap prose">
+          <p class="crumb"><a href="#/">Home</a> · <a href="#/guides">Guides</a> · Picker vs Drawing Names</p>
+          <div class="article-head">
+            <h1>Random Picker vs Drawing Names: Which Is Fairer?</h1>
+            <p class="meta-line">Hats, slips of paper and software, examined honestly — where each method quietly bends the odds.</p>
+          </div>
+          <p>For centuries, the fair way to choose was to write names on slips, drop them in a hat, and draw one out. It feels fair. It looks fair. And in the ways that matter most, it often is not — while the software picker that feels like a shortcut turns out to be the stricter referee. This is not a sales pitch; both methods have real strengths, and there are still occasions where paper wins. But if fairness is the question, the details are worth a closer look, because randomness is a subtle thing and human hands are subtly biased things.</p>
+
+          <h2>Where the hat quietly goes wrong</h2>
+          <p><strong>Slips are not identical.</strong> Fairness in a hat draw depends on every slip being indistinguishable, and they almost never are. One is folded, one is flat. One is a torn corner of card, one is thin paper. The slip written last sits on top; the one written first sinks. A drawer who has handled the slips — folding them, say — has information no one else has, even if they never consciously use it. None of this requires a cheat. It only requires physics and human fingers.</p>
+          <p><strong>The draw is hard to audit.</strong> After a hat draw, what evidence exists? A slip with a name on it. Nobody can verify that every name went in, that none went in twice, or that the drawer's hand didn't drift toward a familiar texture. The audience must trust the process because they cannot see it. Trust is a fine thing among friends and a fragile thing among five hundred giveaway entrants.</p>
+          <p><strong>Repeats and removals get messy.</strong> Drawing three winners without replacement means setting slips aside carefully; with replacement means putting them back and re-mixing convincingly. In practice, busy hosts do both halfway, and the odds drift in ways nobody can reconstruct afterwards.</p>
+
+          <h2>What a software picker does differently</h2>
+          <p>A picker wheel like the one on <a href="#/">our homepage</a> attacks each of those weaknesses directly. Every entry gets a mathematically identical slice of the circle — not approximately identical paper, exactly identical geometry. The winning slice is chosen by the browser's random number generator, which has no hands, no memory of where names sit in the list, and no way to favour the entry typed first or last. Removing a winner is a single click and is total: the name is gone, not resting at the bottom of a hat. And the whole process happens in the open, on a screen the audience can watch, with every name visible before the spin. The audit trail is the show itself.</p>
+          <p>Software has its own honest limitations, and fairness demands naming them. A browser picker is not independently certified the way a regulated lottery machine is; you are trusting well-tested, standard random number generation rather than an audited device. It also produces no physical artefact — some ceremonies want a slip of paper to hold up. And on a screen nobody watches, software is worse than a hat, because a dishonest host can simply spin in private until they like the result. The fairness of a picker lives in its visibility: spin once, in public, and it is the fairest tool most of us will ever use.</p>
+
+          <h2>So which should you choose?</h2>
+          <p>For a family choosing who washes up, honestly, either — the stakes are a sponge. For a classroom, the wheel wins on repeatability and on keeping the teacher above suspicion. For a giveaway with an audience that does not know you, the wheel wins decisively, because strangers cannot inspect your hat but they can watch your screen; our <a href="#/guide/fair-giveaway">giveaway playbook</a> is built around exactly that visibility. For a wedding raffle or a village fete where the charm is the ritual — the drumroll, the child's hand in the hat — paper has a theatre software cannot match, and the tiny biases of folded slips are a fair price for the moment. Fairness, in the end, is partly mathematics and partly belief. The wheel is better mathematics, presented in a way that earns belief. The hat is decent mathematics wrapped in better theatre. Choose with your eyes open, and if the result matters to anyone beyond the room, choose the method your audience can watch.</p>
+        </div>
+      </div>
+
+      <!-- ===================== GUIDE 4 ===================== -->
+      <div class="page" id="page-guide-live">
+        <div class="wrap prose">
+          <p class="crumb"><a href="#/">Home</a> · <a href="#/guides">Guides</a> · Instagram &amp; YouTube Live</p>
+          <div class="article-head">
+            <h1>How to Pick a Winner on Instagram or YouTube Live</h1>
+            <p class="meta-line">Collect entries, verify them, share your screen and spin — a live draw your audience will believe.</p>
+          </div>
+          <p>Picking a giveaway winner live is the gold standard of social media draws, because it replaces the sentence every audience distrusts — "congratulations to our winner!" appearing from nowhere — with a moment they watched happen. A live spin cannot be edited, re-rolled or quietly arranged, and viewers know it. The catch is that live also means live: no retakes, chat scrolling past, and a winner who may or may not be watching. This guide covers the full run — preparation, the broadcast itself, and the follow-up — so the draw feels like a celebration instead of a technical incident.</p>
+
+          <h2>Before you go live: entries and verification</h2>
+          <p>Close entries at the time your post promised, then export or copy the entrants into a list. On Instagram that usually means working through the comments on the giveaway post; on YouTube, the comments under the video. Check each entry against your stated rules — did they follow, tag, subscribe, comment the required word, whatever you asked — and remove the ones that did not, plus duplicate entries if your rules allow only one per person. Do this before the stream, not during it; nothing kills a live draw like watching the host scroll through comments doing admin. What you want at showtime is a finished list, ready to paste into the <a href="#/">picker wheel</a>. Our <a href="#/guide/fair-giveaway">fair giveaway guide</a> covers rule-writing and cleaning in more depth.</p>
+          <p>Prepare your broadcast scene in advance. On YouTube Live, set up a screen-share source showing the browser with the wheel loaded and the entry list pasted in, and do a private test stream to check the wheel is legible at stream resolution — small text on your monitor can be mush on a phone. On Instagram Live, you cannot share a desktop screen directly, so creators either point the camera at a screen (workable, but keep it steady and close) or run the stream from a setup where the wheel fills the frame. Test the framing beforehand; a wobbling, half-visible wheel undermines the very trust the live draw exists to create.</p>
+
+          <h2>During the live: run the draw like a tiny show</h2>
+          <p>Open by restating the essentials in thirty seconds: what the prize is, how people entered, how many entries there are, and what happens if the winner does not claim it. Show the entry list on the wheel and scroll or point out that names are there — invite viewers to spot their own name; the chat lighting up with "I see me!" is the sound of trust being built. Shuffle the entries on camera. Then, clearly: "This is the official spin." One spin, no practice rolls mixed in — if you want a practice spin to test the stream, label it loudly as a test before you do it.</p>
+          <p>When the wheel stops, read the winner's name or username exactly as it appears, and keep the result on screen while you screenshot it. Ask the winner to identify themselves in chat if they are watching — a lovely moment when they are — but never make being present a condition unless your rules said so from the start. Changing the rules mid-stream because the winner is absent is the fastest way to turn a celebration into an argument. If your rules do require presence, say the countdown out loud and redraw on camera when it expires.</p>
+
+          <h2>After the live: close the loop publicly</h2>
+          <p>Within the hour, post the result where the giveaway lived: a comment pinned to the post, a story, a community tab update — with the screenshot of the winning wheel and a tag for the winner. Then contact the winner directly by message to arrange the prize, keeping screenshots of that exchange for your records. Save the stream replay if the platform allows; it is your permanent evidence that the draw was clean, and linking it in the results post settles any late questions before they start. Finally, thank the entrants and say when the next one is coming. A well-run live draw is not just a fair way to end a giveaway — it is the best advertisement for the next one, because everyone who watched knows the prize really gets given away.</p>
+          <p>A last word on scale: with thousands of entries, the wheel's slices get thin and names unreadable on stream. The honest fix is a two-stage draw — use a random method to shortlist twenty finalists in the open (announce that this is what you are doing), then put those twenty on the wheel for the live finale. The audience still watches the prize get won on the wheel, and the wheel stays readable. Transparency about the process matters more than squeezing every name onto one wheel.</p>
+        </div>
+      </div>
+
+      <!-- ===================== GUIDE 5 ===================== -->
+      <div class="page" id="page-guide-decisions">
+        <div class="wrap prose">
+          <p class="crumb"><a href="#/">Home</a> · <a href="#/guides">Guides</a> · Decision Wheels</p>
+          <div class="article-head">
+            <h1>Decision Wheels: Let Chance Decide (Without Regrets)</h1>
+            <p class="meta-line">When every option is fine, the best decision is a fast one — and your reaction to the result is data, too.</p>
+          </div>
+          <p>There is a particular modern paralysis that has nothing to do with difficult choices. Dinner, a film, a weekend plan, which task to start first — the options are all acceptable, the stakes are tiny, and yet the deciding eats twenty minutes and a measurable amount of goodwill. Decision wheels exist for exactly this swamp. Load the options onto the <a href="#/">wheel</a>, spin, done. But used thoughtfully, a decision wheel does something more interesting than picking at random: it reveals what you actually wanted. This guide covers both uses — the wheel as tiebreaker, and the wheel as a mirror.</p>
+
+          <h2>The real cost of small indecision</h2>
+          <p>Every undecided question taxes the people stuck in it. Groups loop ("I don't mind — what do you want?"), individuals burn willpower they need elsewhere, and the evening quietly shrinks around the choosing instead of the doing. Decision researchers have a blunt way of putting it: for choices where the options are roughly equal, the value of a good decision is small and the value of a fast decision is large. A wheel is a fast-decision machine. It converts "we've been debating restaurants for half an hour" into five seconds of suspense and a plan. The meal was never going to be life-changing; the half hour was real.</p>
+
+          <h2>Building a good decision wheel</h2>
+          <p>The quality of a decision wheel is set before the spin, by the list. Three rules make lists that produce results people happily accept. First, only include options you would genuinely accept — one joke entry ("gas station sushi") poisons the wheel, because now nobody trusts the outcome and every spin becomes a negotiation. Second, keep options at the same level: "pizza" versus "the Italian place on Fifth Street" versus "cooking" is a muddled wheel; pick a level — cuisines, specific places, or eat-in versus takeaway — and spin one question at a time. Third, cap the list around eight to twelve options. More than that and you have not simplified the decision, you have just decorated it. If the list is longer, spin in two rounds: first to pick a category, then to pick within it.</p>
+          <p>Weighting is allowed and sometimes wise. If two people mildly prefer Thai and one strongly wants burgers, put Thai on the wheel twice. Duplicated entries take up duplicated slices — the wheel makes the compromise visible and proportional instead of argued. Just agree the weights before spinning, not after the result lands.</p>
+
+          <h2>The mirror trick: your reaction is the answer</h2>
+          <p>Here is the use nobody expects. Spin the wheel, watch where it lands — and before you obey it, notice how you feel. Relief? Disappointment? A sudden urge to argue that the wheel is wrong? That reaction is information your conscious deliberation failed to surface. If the wheel says "the quiet night in" and your heart sinks, you did not actually want the quiet night in; you wanted permission to want the other thing. Decision coaches have used the coin-flip version of this trick for decades: you do not flip the coin to obey it, you flip it to hear yourself react. The honest rule is: if the result pleases you or leaves you neutral, take it and go. If it genuinely dismays you, you have learned your preference — take the other option, and thank the wheel for the clarity. What you must not do is re-spin until the wheel agrees with you while pretending chance decided; that is the worst of both worlds, slow and dishonest.</p>
+
+          <h2>When not to use a wheel</h2>
+          <p>Chance is a tool for equal options and low stakes. It is the wrong tool when the options differ in ways that matter and can be known — cost, safety, someone else's strong needs, a deadline only one option meets. It is also the wrong tool for decisions that belong to a person: a wheel should never overrule the birthday child's cake flavour or a colleague's accessibility needs. And it should never be a way to dodge accountability for a real choice at work; "the wheel decided" is charming for lunch and unacceptable for a budget. The line is simple: if you would be genuinely content with every slice, spin. If you would not, the decision deserves thought, not confetti.</p>
+
+          <h2>Making it a habit that sticks</h2>
+          <p>Groups that adopt a wheel for small decisions report a side benefit: deciding gets funnier and lighter, because the wheel absorbs the blame. Keep a few standing lists — Friday lunch places, film genres, weekend activities, who makes tea — and the spin becomes a ritual rather than a debate. The same tool that runs a <a href="#/guide/fair-giveaway">fair giveaway</a> or picks a <a href="#/guide/classroom-wheel-ideas">student in a classroom</a> turns out to be just as good at rescuing Friday night. Spin it, accept it, and spend the saved twenty minutes on the thing you chose.</p>
+        </div>
+      </div>
+
+      <!-- ===================== ABOUT ===================== -->
+      <div class="page" id="page-about">
+        <div class="wrap prose">
+          <div class="article-head">
+            <h1>About SpinTheWheelHub</h1>
+          </div>
+          <p>SpinTheWheelHub is a free random picker built around a simple belief: when chance has to decide, the deciding should happen in the open. A hat draw asks people to trust a hand they cannot see. A wheel asks them to trust their own eyes. Every name on the wheel is visible before the spin, every slice is the same size, and the pointer lands where it lands in front of everyone. That is the whole philosophy of this site, and it is why the wheel — not a hidden "randomise" button — is the tool we built.</p>
+          <p>The site exists for the moments when a fair, neutral pick matters more than a clever one: the giveaway host who wants entrants to believe the draw, the teacher who wants the whole class alert without playing favourites, the team that needs a coffee-run volunteer without a debate, and the friends who have spent longer choosing a restaurant than they will spend eating in it. For each of those moments we have written practical guides drawn from how these draws actually succeed and fail — you will find them on the <a href="#/guides">guides page</a>, covering <a href="#/guide/fair-giveaway">fair giveaways</a>, <a href="#/guide/classroom-wheel-ideas">classroom ideas</a>, <a href="#/guide/instagram-youtube-live">live draws on Instagram and YouTube</a>, and <a href="#/guide/decision-wheels">everyday decision making</a>.</p>
+          <h2>How we think about fairness</h2>
+          <p>Every entry on our wheel receives an identical slice, and the result is chosen by the random number generator built into your browser — the same standard technology behind shuffled playlists and digital card games. The wheel does not learn, remember or favour. It also does not phone home: your entries are processed entirely on your own device, so the names you type — a class list, a customer list, a team roster — never travel to a server of ours. There is no account, no sign-up and nothing to install. We explain the mechanics in more depth in our comparison of <a href="#/guide/random-picker-vs-drawing-names">random pickers versus drawing names from a hat</a>.</p>
+          <h2>What SpinTheWheelHub is not</h2>
+          <p>Honesty about limits matters as much as fairness. This wheel is a tool for giveaways, classrooms, games and everyday decisions. It is not a certified gambling device, not a regulated lottery system, and not a substitute for the official draw procedures that high-value or legally regulated promotions require. If money, employment decisions or legal obligations hang on a result, use the process those situations demand. For everything else — the other ninety-nine spins in a hundred — a visible wheel and a random result are exactly the right amount of machinery.</p>
+          <p>Questions, corrections or ideas for a guide we should write? We would genuinely like to hear them via the <a href="#/contact">contact page</a>. And if a detail about how the site works is nagging at you, the <a href="#/faq">FAQ page</a> probably answers it.</p>
+        </div>
+      </div>
+
+      <!-- ===================== FAQ ===================== -->
+      <div class="page" id="page-faq">
+        <div class="wrap prose">
+          <div class="article-head">
+            <h1>Frequently Asked Questions</h1>
+            <p class="meta-line">Straight answers about the wheel, the odds and your entries.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Is the wheel really random?</h3>
+            <p>Yes. Each spin's final resting angle is chosen by your browser's built-in random number generator before the animation plays, and every entry occupies an equal slice of the wheel. No entry is weighted, boosted or remembered between spins, so each spin is independent of the last — a name that just won has exactly the same chance on the next spin as everyone else, unless you remove it.</p>
+          </div>
+          <div class="faq-item">
+            <h3>How many entries can the wheel hold?</h3>
+            <p>There is no hard limit, and the wheel will happily draw a few hundred slices. In practice, labels become hard to read beyond roughly one hundred entries on a normal screen. For very large draws, spin in rounds or shortlist finalists first — the <a href="#/guide/instagram-youtube-live">live winner guide</a> explains a fair two-stage approach for big audiences.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Can an entry have a bigger chance than the others?</h3>
+            <p>Yes — simply enter it more than once. Each line becomes its own slice, so a name listed twice has double the chance of a name listed once. It is a transparent way to weight a raffle (for example, giving repeat customers an extra entry) because the audience can see the extra slice on the wheel.</p>
+          </div>
+          <div class="faq-item">
+            <h3>What happens when someone wins — can I draw again?</h3>
+            <p>After each spin you can spin again with the same list, or remove the winner and spin for the next prize. Removing winners is the right approach for multi-prize giveaways, since it guarantees nobody can take two prizes. The full routine is in our <a href="#/guide/fair-giveaway">fair giveaway guide</a>.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Are my entries saved or sent anywhere?</h3>
+            <p>No. Your list is processed entirely in your browser on your own device. SpinTheWheelHub has no accounts and no entry database; nothing you type into the wheel is transmitted to or stored on a server. If you refresh the page, the sample list returns — so for an important draw, keep your master list in your own document and paste it in when needed.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Does shuffling change the odds?</h3>
+            <p>No. Every slice is the same size wherever it sits, so reordering the list cannot change anyone's probability. Shuffling is still worth doing before a public draw: it looks fairer, mixes neighbours apart, and stops anyone claiming the list was arranged. Fairness you can see is worth almost as much as fairness itself.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Can I use the wheel for a real money prize or a regulated draw?</h3>
+            <p>The wheel is designed for giveaways, classrooms, games and everyday decisions. It is not a certified gambling or lottery device, and promotions involving significant money or legal regulation may require official procedures and permits depending on where you live. For those, follow the rules that apply to your draw; for everything else, spin away.</p>
+          </div>
+          <div class="faq-item">
+            <h3>The wheel landed between two names. Who won?</h3>
+            <p>That cannot actually happen. The pointer always settles on exactly one slice, and the winner announced under the wheel is calculated from the wheel's final angle — not judged by eye. Trust the announced name; it is the mathematically correct slice for where the wheel stopped.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Can I use SpinTheWheelHub in my classroom or stream?</h3>
+            <p>Absolutely — that is what it is for. Teachers can find ready-made ideas in the <a href="#/guide/classroom-wheel-ideas">classroom guide</a>, and streamers can find the full live-draw routine in the <a href="#/guide/instagram-youtube-live">Instagram and YouTube Live guide</a>. No permission or credit is required for ordinary use of the tool.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Is SpinTheWheelHub free?</h3>
+            <p>Yes — the wheel and every guide on the site are free to use, with no sign-up. The site is kept running by advertising, which is described in our <a href="#/privacy">privacy policy</a>.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===================== CONTACT ===================== -->
+      <div class="page" id="page-contact">
+        <div class="wrap prose">
+          <div class="article-head">
+            <h1>Contact SpinTheWheelHub</h1>
+          </div>
+          <p>We read everything that comes in — questions about the wheel, corrections to a guide, suggestions for a topic we should cover, or reports of something misbehaving on the site. The fastest way to reach us is email:</p>
+          <p><a href="mailto:contact@spinthewheelhub.com">contact@spinthewheelhub.com</a></p>
+          <p>To help us help you quickly, it is worth including a line about what you were doing when something went wrong — which page, which button, roughly how many entries were on the wheel. If your question is about how the wheel works, the odds, or whether your entries are stored, there is a good chance the <a href="#/faq">FAQ page</a> already answers it in more detail than an email would.</p>
+          <p>Please note that we cannot run a draw for you, verify a third party's giveaway, or intervene in a dispute about a prize run by someone else using the wheel. A draw's fairness ultimately rests with its host — our <a href="#/guide/fair-giveaway">fair giveaway guide</a> sets out the practices we recommend every host follow. For anything about how this site handles information, see the <a href="#/privacy">privacy policy</a>, and for the terms that govern use of the site, see the <a href="#/terms">terms of use</a>.</p>
+        </div>
+      </div>
+
+      <!-- ===================== PRIVACY ===================== -->
+      <div class="page" id="page-privacy">
+        <div class="wrap prose">
+          <div class="article-head">
+            <h1>Privacy Policy</h1>
+            <p class="meta-line">Last updated: November 2026</p>
+          </div>
+          <p>This policy explains what information SpinTheWheelHub does and does not handle when you use the site. The short version is genuinely short: the wheel runs entirely in your browser, we have no user accounts, and we never see the entries you type.</p>
+          <h2>The wheel and your entries</h2>
+          <p>When you type names or choices into the entry box, that text is processed locally on your device by the page's own code. It is not transmitted to us, not stored on any server, and not saved between visits — refreshing the page restores the sample list. We could not read your class list, customer list or team roster even if we wanted to, and we designed it that way on purpose.</p>
+          <h2>Information collected automatically</h2>
+          <p>Like most websites, the hosting and analytics services behind this site may automatically receive standard technical information when your browser loads a page, such as your approximate region, browser type, device type and which pages were viewed. This information is aggregated and used to understand which guides and tools are useful, to keep the site secure, and to fix problems. It is not used to identify individual visitors, and we do not build profiles of the people who spin the wheel.</p>
+          <h2>Cookies and advertising</h2>
+          <p>This site may display advertising provided by third-party advertising partners, including Google. Advertising partners may use cookies or similar technologies to serve ads based on a visitor's prior visits to this and other websites, and to measure how ads perform. You can control or disable cookies in your browser settings, and you can learn about personalised advertising choices through your browser and platform settings. Disabling cookies does not affect the wheel itself, which needs no cookies to function.</p>
+          <h2>Links to other sites</h2>
+          <p>Our guides may link to external websites for reference. We are not responsible for the privacy practices or content of sites we do not operate, and we encourage you to read their policies when you visit them.</p>
+          <h2>Children's privacy</h2>
+          <p>SpinTheWheelHub is a general-audience tool. We do not knowingly collect personal information from children. Because the wheel collects nothing from anyone, the names typed into it — including by teachers using it in a classroom — remain on the device being used, as described above.</p>
+          <h2>Changes to this policy</h2>
+          <p>If we change how the site handles information, we will update this page and revise the date at the top. Continuing to use the site after a change means you accept the updated policy.</p>
+          <h2>Contact</h2>
+          <p>Questions about this policy can be sent through the <a href="#/contact">contact page</a>.</p>
+        </div>
+      </div>
+
+      <!-- ===================== TERMS ===================== -->
+      <div class="page" id="page-terms">
+        <div class="wrap prose">
+          <div class="article-head">
+            <h1>Terms of Use</h1>
+            <p class="meta-line">Last updated: November 2026</p>
+          </div>
+          <p>By using SpinTheWheelHub, you agree to these terms. If you do not agree with them, please do not use the site.</p>
+          <h2>The service</h2>
+          <p>SpinTheWheelHub provides a free, browser-based random picker wheel and related guides and articles. The service is provided "as is" and "as available", without warranties of any kind. We may change, pause or discontinue any part of the site at any time without notice.</p>
+          <h2>Fair use of results</h2>
+          <p>The wheel produces random results for entertainment, educational, organisational and promotional purposes. You are responsible for how you use those results. If you run a giveaway, raffle or promotion using the wheel, you are the organiser: setting lawful rules, verifying eligibility, delivering prizes and complying with the laws and platform rules that apply to your promotion are your responsibilities, not ours.</p>
+          <h2>Prohibited uses</h2>
+          <p>You agree not to use this site for unlawful gambling or for any draw, lottery or promotion that requires a licence or permit you do not hold; not to misrepresent a result produced elsewhere as a result of this wheel, or a result of this wheel as something it was not; and not to attempt to disrupt, overload or interfere with the site or its hosting.</p>
+          <h2>Intellectual property</h2>
+          <p>The text, design and code of this site belong to SpinTheWheelHub or its licensors. You may read, share and link to our pages freely. Reproducing substantial parts of our guides or articles elsewhere requires permission. Using the wheel itself — in a classroom, a stream, a workplace or an event — requires no permission at all.</p>
+          <h2>Limitation of liability</h2>
+          <p>To the fullest extent permitted by law, SpinTheWheelHub is not liable for any loss or dispute arising from the use of the wheel or its results, including disputed giveaway outcomes, missed prizes or decisions made by chance. Randomness is the product; what you stake on it is your choice.</p>
+          <h2>Changes to these terms</h2>
+          <p>We may update these terms from time to time; the current version will always be on this page with its revision date. Questions about these terms can be sent through the <a href="#/contact">contact page</a>. You can also read our <a href="#/privacy">privacy policy</a> for how the site handles information.</p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site">
+      <div class="wrap">
+        <div class="foot-grid">
+          <div>
+            <h4>SpinTheWheelHub</h4>
+            <ul>
+              <li><a href="#/">Spin the Wheel</a></li>
+              <li><a href="#/about">About</a></li>
+              <li><a href="#/faq">FAQ</a></li>
+              <li><a href="#/contact">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Guides</h4>
+            <ul>
+              <li><a href="#/guide/fair-giveaway">Fair Giveaway Guide</a></li>
+              <li><a href="#/guide/classroom-wheel-ideas">Classroom Wheel Ideas</a></li>
+              <li><a href="#/guide/random-picker-vs-drawing-names">Picker vs Drawing Names</a></li>
+              <li><a href="#/guide/instagram-youtube-live">Winners on Instagram &amp; YouTube Live</a></li>
+              <li><a href="#/guide/decision-wheels">Decision Wheels</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Site</h4>
+            <ul>
+              <li><a href="#/privacy">Privacy Policy</a></li>
+              <li><a href="#/terms">Terms of Use</a></li>
+            </ul>
+          </div>
+        </div>
+        <p class="foot-note">© 2026 SpinTheWheelHub. The wheel runs entirely in your browser — your entries never leave your device. SpinTheWheelHub is a tool for giveaways, classrooms and everyday decisions; it is not a gambling or regulated lottery service.</p>
+      </div>
+    </footer>
+
+    <canvas id="confetti" aria-hidden="true"></canvas>
+
+    <script>
+      (function () {
+        "use strict";
+
+        /* ---------- Routing ---------- */
+        var routes = {
+          "/": "page-home",
+          "/guides": "page-guides",
+          "/guide/fair-giveaway": "page-guide-fair-giveaway",
+          "/guide/classroom-wheel-ideas": "page-guide-classroom",
+          "/guide/random-picker-vs-drawing-names": "page-guide-picker-vs-drawing",
+          "/guide/instagram-youtube-live": "page-guide-live",
+          "/guide/decision-wheels": "page-guide-decisions",
+          "/about": "page-about",
+          "/faq": "page-faq",
+          "/contact": "page-contact",
+          "/privacy": "page-privacy",
+          "/terms": "page-terms"
+        };
+        var navFor = {
+          "/": "home", "/guides": "guides",
+          "/guide/fair-giveaway": "guides", "/guide/classroom-wheel-ideas": "guides",
+          "/guide/random-picker-vs-drawing-names": "guides", "/guide/instagram-youtube-live": "guides",
+          "/guide/decision-wheels": "guides",
+          "/about": "about", "/faq": "faq", "/contact": "contact"
+        };
+        function currentPath() {
+          var h = window.location.hash.replace(/^#/, "");
+          if (!h || h.charAt(0) !== "/") return "/";
+          return routes.hasOwnProperty(h) ? h : "/";
+        }
+        function render() {
+          var path = currentPath();
+          var pages = document.querySelectorAll(".page");
+          for (var i = 0; i < pages.length; i++) pages[i].classList.remove("active");
+          document.getElementById(routes[path]).classList.add("active");
+          var links = document.querySelectorAll("[data-nav]");
+          for (var j = 0; j < links.length; j++) {
+            links[j].classList.toggle("active", links[j].getAttribute("data-nav") === navFor[path]);
+          }
+          window.scrollTo(0, 0);
+        }
+        window.addEventListener("hashchange", render);
+
+        /* ---------- Wheel ---------- */
+        var PALETTE = ["#7c3aed", "#db2777", "#f59e0b", "#059669", "#2563eb", "#dc2626",
+                       "#0891b2", "#9333ea", "#ea580c", "#16a34a", "#4f46e5", "#c026d3",
+                       "#0d9488", "#b45309", "#be185d", "#1d4ed8"];
+        var canvas = document.getElementById("wheel");
+        var ctx = canvas.getContext("2d");
+        var textarea = document.getElementById("entries");
+        var countEl = document.getElementById("entryCount");
+        var spinBtn = document.getElementById("spinBtn");
+        var winnerBox = document.getElementById("winnerBox");
+        var winnerName = document.getElementById("winnerName");
+        var SAMPLE = "Alice\nBob\nCarol\nDavid\nEmma\nFrank\nGrace\nHenry";
+
+        var rotation = 0;       // radians, current wheel angle
+        var spinning = false;
+        var lastWinnerIndex = -1;
+
+        function getEntries() {
+          var lines = textarea.value.split("\n");
+          var out = [];
+          for (var i = 0; i < lines.length; i++) {
+            var t = lines[i].trim();
+            if (t) out.push(t);
+          }
+          return out;
+        }
+
+        function drawWheel() {
+          var entries = getEntries();
+          var size = canvas.width;
+          var cx = size / 2, cy = size / 2, r = size / 2 - 6;
+          ctx.clearRect(0, 0, size, size);
+
+          // outer rim
+          ctx.beginPath();
+          ctx.arc(cx, cy, r + 4, 0, Math.PI * 2);
+          ctx.fillStyle = "#4c1d95";
+          ctx.fill();
+
+          if (entries.length === 0) {
+            ctx.beginPath();
+            ctx.arc(cx, cy, r, 0, Math.PI * 2);
+            ctx.fillStyle = "#ede9fe";
+            ctx.fill();
+            ctx.fillStyle = "#4c1d95";
+            ctx.font = "600 30px Poppins, sans-serif";
+            ctx.textAlign = "center";
+            ctx.textBaseline = "middle";
+            ctx.fillText("Add some entries", cx, cy - 18);
+            ctx.font = "400 22px 'Nunito Sans', sans-serif";
+            ctx.fillText("to build your wheel", cx, cy + 20);
+          } else {
+            var n = entries.length;
+            var seg = (Math.PI * 2) / n;
+            for (var i = 0; i < n; i++) {
+              var start = rotation + i * seg;
+              var end = start + seg;
+              ctx.beginPath();
+              ctx.moveTo(cx, cy);
+              ctx.arc(cx, cy, r, start, end);
+              ctx.closePath();
+              ctx.fillStyle = PALETTE[i % PALETTE.length];
+              ctx.fill();
+              ctx.strokeStyle = "rgba(255,255,255,0.85)";
+              ctx.lineWidth = 2;
+              ctx.stroke();
+
+              // label
+              ctx.save();
+              ctx.translate(cx, cy);
+              ctx.rotate(start + seg / 2);
+              ctx.textAlign = "right";
+              ctx.textBaseline = "middle";
+              ctx.fillStyle = "#ffffff";
+              var label = entries[i];
+              var maxLen = n <= 6 ? 18 : n <= 12 ? 14 : n <= 24 ? 11 : 8;
+              if (label.length > maxLen) label = label.slice(0, maxLen - 1) + "…";
+              var fontSize = n <= 6 ? 34 : n <= 10 ? 28 : n <= 16 ? 23 : n <= 28 ? 18 : 14;
+              ctx.font = "700 " + fontSize + "px 'Nunito Sans', sans-serif";
+              ctx.shadowColor = "rgba(0,0,0,0.35)";
+              ctx.shadowBlur = 3;
+              ctx.fillText(label, r - 18, 0);
+              ctx.restore();
+            }
+          }
+
+          // hub
+          ctx.beginPath();
+          ctx.arc(cx, cy, size * 0.085, 0, Math.PI * 2);
+          ctx.fillStyle = "#ffffff";
+          ctx.fill();
+          ctx.lineWidth = 5;
+          ctx.strokeStyle = "#4c1d95";
+          ctx.stroke();
+          ctx.fillStyle = "#6d28d9";
+          ctx.font = "800 " + Math.round(size * 0.038) + "px Poppins, sans-serif";
+          ctx.textAlign = "center";
+          ctx.textBaseline = "middle";
+          ctx.fillText("SPIN", cx, cy + 1);
+
+          countEl.textContent = entries.length;
+          spinBtn.disabled = spinning || entries.length < 2;
+          spinBtn.textContent = entries.length < 2 ? "ADD 2+ ENTRIES" : (spinning ? "SPINNING…" : "SPIN");
+        }
+
+        /* Tick sound (Web Audio, created on first user gesture) */
+        var audioCtx = null;
+        function tick() {
+          try {
+            if (!audioCtx) {
+              var AC = window.AudioContext || window.webkitAudioContext;
+              if (!AC) return;
+              audioCtx = new AC();
+            }
+            if (audioCtx.state === "suspended") audioCtx.resume();
+            var osc = audioCtx.createOscillator();
+            var gain = audioCtx.createGain();
+            osc.type = "square";
+            osc.frequency.value = 1400;
+            gain.gain.setValueAtTime(0.03, audioCtx.currentTime);
+            gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 0.03);
+            osc.connect(gain);
+            gain.connect(audioCtx.destination);
+            osc.start();
+            osc.stop(audioCtx.currentTime + 0.035);
+          } catch (e) { /* sound is optional */ }
+        }
+
+        function winnerIndexFor(rot, n) {
+          // Pointer sits at the top of the wheel: angle -PI/2.
+          var seg = (Math.PI * 2) / n;
+          var pointer = -Math.PI / 2;
+          var rel = (pointer - rot) % (Math.PI * 2);
+          if (rel < 0) rel += Math.PI * 2;
+          return Math.floor(rel / seg) % n;
+        }
+
+        function spin() {
+          var entries = getEntries();
+          if (spinning || entries.length < 2) return;
+          spinning = true;
+          winnerBox.classList.remove("show");
+          drawWheel();
+
+          var n = entries.length;
+          var seg = (Math.PI * 2) / n;
+          // Choose the winning slice by pure chance, then land the pointer inside it.
+          var winIdx = Math.floor(Math.random() * n);
+          var margin = seg * 0.18;
+          var offsetInSeg = margin + Math.random() * (seg - margin * 2);
+          var targetRel = winIdx * seg + offsetInSeg; // pointer-relative angle of winner
+          var twoPi = Math.PI * 2;
+          var currentRel = ((-Math.PI / 2 - rotation) % twoPi + twoPi) % twoPi;
+          var delta = (currentRel - targetRel + twoPi) % twoPi;
+          var totalTurns = (5 + Math.floor(Math.random() * 3)) * twoPi; // 5–7 full turns
+          var startRot = rotation;
+          var totalDelta = totalTurns + delta;
+          var duration = 5200 + Math.random() * 1300;
+          var startTime = null;
+          var lastSegIdx = winnerIndexFor(rotation, n);
+
+          function easeOutQuint(t) { return 1 - Math.pow(1 - t, 5); }
+
+          function frame(ts) {
+            if (startTime === null) startTime = ts;
+            var t = Math.min((ts - startTime) / duration, 1);
+            rotation = startRot + totalDelta * easeOutQuint(t);
+            var idx = winnerIndexFor(rotation, n);
+            if (idx !== lastSegIdx) { lastSegIdx = idx; tick(); }
+            drawWheel();
+            if (t < 1) {
+              requestAnimationFrame(frame);
+            } else {
+              rotation = startRot + totalDelta;
+              drawWheel();
+              spinning = false;
+              lastWinnerIndex = winIdx;
+              var finalEntries = getEntries();
+              var name = finalEntries[winIdx] !== undefined ? finalEntries[winIdx] : entries[winIdx];
+              winnerName.textContent = name;
+              winnerBox.classList.add("show");
+              drawWheel();
+              launchConfetti();
+              winnerBox.scrollIntoView({ behavior: "smooth", block: "nearest" });
+            }
+          }
+          requestAnimationFrame(frame);
+        }
+
+        /* ---------- Confetti ---------- */
+        var confettiCanvas = document.getElementById("confetti");
+        var cctx = confettiCanvas.getContext("2d");
+        var confettiPieces = [];
+        var confettiRunning = false;
+        var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+        function launchConfetti() {
+          if (reduceMotion) return;
+          confettiCanvas.width = window.innerWidth;
+          confettiCanvas.height = window.innerHeight;
+          confettiCanvas.style.display = "block";
+          confettiPieces = [];
+          var colors = PALETTE.concat(["#ffffff", "#fde68a"]);
+          for (var i = 0; i < 160; i++) {
+            confettiPieces.push({
+              x: Math.random() * confettiCanvas.width,
+              y: -20 - Math.random() * confettiCanvas.height * 0.35,
+              w: 6 + Math.random() * 7,
+              h: 8 + Math.random() * 9,
+              vy: 2.2 + Math.random() * 3.4,
+              vx: -1.4 + Math.random() * 2.8,
+              rot: Math.random() * Math.PI * 2,
+              vr: -0.12 + Math.random() * 0.24,
+              color: colors[Math.floor(Math.random() * colors.length)]
+            });
+          }
+          if (!confettiRunning) {
+            confettiRunning = true;
+            requestAnimationFrame(confettiFrame);
+          }
+        }
+        function confettiFrame() {
+          cctx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
+          var alive = false;
+          for (var i = 0; i < confettiPieces.length; i++) {
+            var p = confettiPieces[i];
+            p.x += p.vx; p.y += p.vy; p.rot += p.vr;
+            if (p.y < confettiCanvas.height + 30) alive = true;
+            cctx.save();
+            cctx.translate(p.x, p.y);
+            cctx.rotate(p.rot);
+            cctx.fillStyle = p.color;
+            cctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+            cctx.restore();
+          }
+          if (alive) {
+            requestAnimationFrame(confettiFrame);
+          } else {
+            confettiRunning = false;
+            confettiCanvas.style.display = "none";
+            cctx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
+          }
+        }
+
+        /* ---------- Controls ---------- */
+        textarea.addEventListener("input", function () {
+          winnerBox.classList.remove("show");
+          drawWheel();
+        });
+        spinBtn.addEventListener("click", spin);
+        canvas.addEventListener("click", spin);
+
+        document.getElementById("shuffleBtn").addEventListener("click", function () {
+          var entries = getEntries();
+          for (var i = entries.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var tmp = entries[i]; entries[i] = entries[j]; entries[j] = tmp;
+          }
+          textarea.value = entries.join("\n");
+          winnerBox.classList.remove("show");
+          drawWheel();
+        });
+        document.getElementById("sortBtn").addEventListener("click", function () {
+          var entries = getEntries();
+          entries.sort(function (a, b) { return a.toLowerCase().localeCompare(b.toLowerCase()); });
+          textarea.value = entries.join("\n");
+          drawWheel();
+        });
+        document.getElementById("clearBtn").addEventListener("click", function () {
+          textarea.value = "";
+          winnerBox.classList.remove("show");
+          drawWheel();
+          textarea.focus();
+        });
+        document.getElementById("sampleBtn").addEventListener("click", function () {
+          textarea.value = SAMPLE;
+          winnerBox.classList.remove("show");
+          drawWheel();
+        });
+        document.getElementById("spinAgainBtn").addEventListener("click", function () {
+          winnerBox.classList.remove("show");
+          spin();
+        });
+        document.getElementById("closeWinnerBtn").addEventListener("click", function () {
+          winnerBox.classList.remove("show");
+        });
+        document.getElementById("removeWinnerBtn").addEventListener("click", function () {
+          var name = winnerName.textContent;
+          var lines = textarea.value.split("\n");
+          var removed = false;
+          var out = [];
+          for (var i = 0; i < lines.length; i++) {
+            if (!removed && lines[i].trim() === name) { removed = true; continue; }
+            out.push(lines[i]);
+          }
+          textarea.value = out.join("\n").replace(/\n{2,}/g, "\n").trim();
+          winnerBox.classList.remove("show");
+          drawWheel();
+          if (getEntries().length >= 2) spin();
+        });
+
+        render();
+        drawWheel();
+        if (document.fonts && document.fonts.ready) {
+          document.fonts.ready.then(drawWheel);
+        }
+      })();
+    </script>
+  </body>
+</html>
